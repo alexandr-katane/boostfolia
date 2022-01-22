@@ -1,0 +1,89 @@
+.intro-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        display: inline-block;
+        font-family: 'big_noodle_titling';
+        @include responsive-size(font-size, 48, 40, $maxWidthContainer);
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: #3d3d3d;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+            right: 5px;
+            height: 3px;
+            background-color: #f4511e;
+        }
+    }
+
+    &__text {
+        @include responsive-size(margin-top, 25, 15, $maxWidthContainer);
+        font-size: 14.1px;
+        line-height: 1.2;
+        font-weight: 100;
+        color: #696969;
+        max-width: 550px;
+    }
+}
+
+.alter-title {
+    font-family: 'Roboto Condensed';
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #f6f6f6;
+    @include responsive-size(font-size, 36, 30, $maxWidthContainer);
+    @include responsive-size(margin-bottom, 44, 25, $maxWidthContainer);
+    @include responsive-size(padding-bottom, 18, 10, $maxWidthContainer);
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform:  translate(-50%, 0);
+        width: 86px;
+        height: 1px;
+        background-color: #404040;
+    }
+}
+
+._ibg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    img{
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+body.ie{
+    ._ibg{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    ._ibg img{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}

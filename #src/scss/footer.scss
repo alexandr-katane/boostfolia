@@ -1,0 +1,37 @@
+.footer {
+    background-color: #171f23;
+    @include responsive-size(padding-top, 48, 30, $maxWidthContainer);
+    @include responsive-size(padding-bottom, 60, 45, $maxWidthContainer);
+
+    &__content {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__logo {
+        margin-bottom: 9px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+    
+
+    &__socials {
+        
+    }
+
+    &__link {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}
