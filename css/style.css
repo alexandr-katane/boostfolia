@@ -971,7 +971,7 @@ body._lock {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 140px;
@@ -2868,7 +2868,7 @@ button.swiper-pagination-bullet {
 .post-blog:hover .post-blog__hover {
   opacity: 1;
   visibility: visible;
-  z-index: 3;
+  z-index: 2;
   cursor: pointer;
 }
 
